@@ -5,19 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu.component';
-import { WeatherComponent } from './weather/weather.component';
-import { CurrencyComponent } from './currency/currency.component';
-import { MovieComponent } from './movie/movie.component';
+import { PropertiesComponent } from './properties/properties.component';
+import { SchoolsComponent } from './schools/schools.component';
 import { CONST_ROUTING } from './app.routing';
-import { SharedService } from "./shared.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    WeatherComponent,
-    CurrencyComponent,
-    MovieComponent
+    PropertiesComponent,
+    SchoolsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +22,7 @@ import { SharedService } from "./shared.service";
     HttpModule,
 	CONST_ROUTING
   ],
-  providers: [SharedService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

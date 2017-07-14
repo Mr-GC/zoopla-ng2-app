@@ -1,10 +1,10 @@
-import { DwNg2AppPage } from './app.po';
+import { ZooplaNg2AppPage } from './app.po';
 
-describe('dw-ng2-app App', () => {
-  let page: DwNg2AppPage;
+describe('zoopla-ng2-app App', () => {
+  let page: ZooplaNg2AppPage;
 
   beforeEach(() => {
-    page = new DwNg2AppPage();
+    page = new ZooplaNg2AppPage();
   });
 
   it('should display message saying app works', () => {
