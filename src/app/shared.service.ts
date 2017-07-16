@@ -19,5 +19,4 @@ export class SharedService {
         }).catch(function(error: any){return Observable.throw(error);
         });
 	}
-
 }
