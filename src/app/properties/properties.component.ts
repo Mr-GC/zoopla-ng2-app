@@ -17,19 +17,16 @@ export class PropertiesComponent implements OnInit {
 	ngOnInit() {
 	}
 	
-	callWeatherService() { 
+	callPropertiesService() { 
 		this._sharedService.findProperties(this.id_postcode, this.id_area)
 		.subscribe(
 		lstresult => { 
-			this.op_city = lstresult["query"]["results"]["channel"]["location"]["city"];
-			this.op_region = lstresult["query"]["results"]["channel"]["location"]["region"];
-			this.op_country = lstresult["query"]["results"]["channel"]["location"]["country"];
-			this.op_date = lstresult["query"]["results"]["channel"]["item"]["condition"]["date"];
-			this.op_text = lstresult["query"]["results"]["channel"]["item"]["condition"]["text"];
-			this.op_temp = lstresult["query"]["results"]["channel"]["item"]["condition"]["temp"]; 
+			this.op_image = lstresult["listing"][0]["image_url"];
+			this.op_address = lstresult["listing"][0]["displayable_address"];
+			this.op_description = lstresult["listing"][0]["description"];
 		},
 		error => {
-					console.log("Error. The findWeather result JSON value is as follows:");
+					console.log("Error. The findProperties result JSON value is as follows:");
 					console.log(error);
 				}
 		); 

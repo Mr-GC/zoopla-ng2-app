@@ -1,3 +1,18 @@
-<p>
-  properties works!
-</p>
+<h2>Zoopla Properties</h2>
+<div class="col-md-8 col-md-offset-2">
+ <div class="form-group">
+  <input type="text" [(ngModel)]="id_postcode" class="form-control" placeholder="Enter a postcode ..."><br>
+  <input type="text" [(ngModel)]="id_area" class="form-control" placeholder="Enter an area ..."><br>
+  <button type="button" class="btn btn-primary" (click)="callPropertiesService()">Submit</button>
+  <br><br><br>
+  <br>
+  <p class="well lead">
+    <img src="{{ this.op_image }}" alt="" ><br>
+    <i>Address :</i> {{ this.op_address }} <br>
+    <i>Description :</i> {{ this.op_description }} <br>
+  </p>
+  <p class="text-info">Total # of all the service requests including Properties and School is :
+    <span class="badge">{{this._sharedService.totReqsMade}}</span>
+  </p>
+ </div>
+</div>

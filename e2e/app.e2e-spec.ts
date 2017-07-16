@@ -1,6 +1,6 @@
 import { ZooplaNg2AppPage } from './app.po';
 
-describe('zoopla-ng2-app App', () => {
+describe('zoopla-ng2-app App', function() {
   let page: ZooplaNg2AppPage;
 
   beforeEach(() => {
