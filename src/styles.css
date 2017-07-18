@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+	max-width: 100%
+}

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+li.property {
+    border-bottom: 1px dashed #333;
+	margin: 0 0 20px 0;
+}

@@ -6,11 +6,16 @@
   <button type="button" class="btn btn-primary" (click)="callPropertiesService()">Submit</button>
   <br><br><br>
   <br>
-  <p class="well lead">
-    <img src="{{ this.op_image }}" alt="" ><br>
-    <i>Address :</i> {{ this.op_address }} <br>
-    <i>Description :</i> {{ this.op_description }} <br>
-  </p>
+  <div class="well lead">
+  
+	<ul id="propertiesList">
+		<li class="property" *ngFor="let property of this.op_propertiesList; let i = index">
+			<img class="propThumb" id="propThumb{{i}}" src="{{ property.image_url }}" alt="" ><br>
+			<p class="addr"><i>Address :</i> {{ property.displayable_address }}</p>
+			<p clas="desc"><i>Description :</i> {{ property.description }}</p>
+		</li>
+	</ul>
+  </div>
   <p class="text-info">Total # of all the service requests including Properties and School is :
     <span class="badge">{{this._sharedService.totReqsMade}}</span>
   </p>
