@@ -9,7 +9,7 @@ import { SharedService } from "./../shared.service";
 export class PropertiesComponent implements OnInit {
 	id_postcode: string = "";
 	id_area: string = "";
-	op_propertiesList = {};
+	op_propertiesList = [];
 	constructor(private _sharedService: SharedService) { }
 
 	ngOnInit() {
